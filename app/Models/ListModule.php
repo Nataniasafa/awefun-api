@@ -5,13 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class DetailAssigment extends Model
+class ListModule extends Model
 {
-    protected $table = "detail_assigment" ; 
+    protected $table = "list_module" ; 
     
     protected $fillable = [
+        'label_id', 
+        'date',
+        'img',
         'title',
-        'description',
-        
-    ];
+        'description', 
+     ];
 }

@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Label extends Model
 {
-    use HasFactory;
+    protected $table = "label" ; 
+    
+    protected $fillable = [
+        'label', 
+     ];
+
 }
