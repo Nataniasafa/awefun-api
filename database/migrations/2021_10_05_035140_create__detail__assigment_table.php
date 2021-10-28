@@ -17,7 +17,7 @@ class CreateDetailAssigmentTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('description');
-            $table->foreignId('category_id');
+            $table->foreignId('category_id')->references('id')->on('categorys')->onDelete('cascade');;
             $table->foreignId('user_id');
             $table->string('image');
             $table->timestamps();

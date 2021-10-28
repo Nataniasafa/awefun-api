@@ -16,7 +16,7 @@ class CreateDetailModuleTable extends Migration
         Schema::create('detail_module', function (Blueprint $table) {
             $table->id();
             $table->string('url_image');
-            $table->foreignId('category_id');
+            $table->foreignId('category_id')->references('id')->on('categorys')->onDelete('cascade');
             $table->string('date');
             $table->string('title');
             $table->longText('description');
