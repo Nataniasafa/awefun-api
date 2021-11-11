@@ -49,4 +49,10 @@ class LabelController extends Controller
         $status = "success delete";
         return response()->json(compact('status'), 200);
     }
+
+    public function getAllLabel()
+    {
+        $label = Label::all();
+        return response()->json(compact('label'), 200);
+    }
 }

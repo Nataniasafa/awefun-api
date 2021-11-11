@@ -51,8 +51,9 @@ class CategoryController extends Controller
         return response()->json(compact('status'), 200);
     }
 
-    // public function getAllCategory(Request $request){
-    //     $category->all();
-    //     return response()->json(compact('status','category'), 200);
-    // }
+    public function getAllCategory()
+    {
+        $category = Category::all();
+        return response()->json(compact('category'), 200);
+    }
 }

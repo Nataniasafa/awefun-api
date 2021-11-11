@@ -12,6 +12,6 @@ class DetailAssigment extends Model
     protected $fillable = [
         'title',
         'description',
+        ];
         
-    ];
 }
