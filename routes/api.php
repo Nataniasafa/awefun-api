@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LabelController;
 use App\Http\Controllers\DetailAssigmentController;
+use App\Http\Controllers\DetailModuleController;
+use App\Http\Controllers\ListModuleController;
 
 /*
 |--------------------------------------------------------------------------
