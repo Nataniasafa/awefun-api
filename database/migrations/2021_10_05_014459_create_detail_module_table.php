@@ -21,7 +21,7 @@ class CreateDetailModuleTable extends Migration
             $table->string('title');
             $table->longText('description');
             $table->string('link_url');
-            $table->foreignId('label_id');
+            
             $table->timestamps();
         });
     }

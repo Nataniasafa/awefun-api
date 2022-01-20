@@ -43,7 +43,7 @@ Route::post('/detailModule/update/{id}',[DetailModuleController::class, 'updateD
 Route::delete('/detailModule/delete/{id}',[DetailModuleController::class, 'deleteDetailModule']);
 
 Route::get('/detailAssigment/get/{id}',[DetailAssigmentController::class, 'showDetailAssigment']);
-Route::get('/detailAssigment/get/',[DetailAssigmentController::class, 'getAllCategory']);
+Route::get('/detailAssigment/get/',[DetailAssigmentController::class, 'getAllAssigment']);
 Route::post('/detailAssigment/create/',[DetailAssigmentController::class, 'createDetailAssigment']);
 Route::post('/detailAssigment/update/{id}',[DetailAssigmentController::class, 'updateDetailAssigment']);
 Route::delete('/detailAssigment/delete/{id}',[DetailAssigmentController::class, 'deleteDetailAssigment']);

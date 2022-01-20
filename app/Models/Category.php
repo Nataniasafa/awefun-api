@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Models;
-
+use App\Http\controlers\DetailModuleController;
+use App\Http\controlers\CategoryController;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,4 +14,7 @@ class Category extends Model
         'name_category',
         
     ];
+    public function detail_module(){
+        return $this->hashMany(DetailModule::class);
+    }
 }

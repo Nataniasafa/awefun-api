@@ -52,4 +52,10 @@ class DetailAssigmentController extends Controller
         $status = "success delete";
         return response()->json(compact('status'), 200);
     }
+
+    public function getAllAssigment()
+    {
+        $detail_assigment = DetailAssigment::all();
+        return response()->json(compact('detail_assigment'), 200);
+    }
 }

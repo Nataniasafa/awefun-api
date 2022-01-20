@@ -8,9 +8,9 @@ class DetailModuleController extends Controller
 {
     public function createDetailModule(Request $request, Category $category){
         $detail_module = new DetailModule();
-        $detail_module->category_id = $category->id;
+        $detail_module->category_id = $request->category_id;
         $detail_module->date = $request->date;
-        $detail_module->img = $request->img;
+        $detail_module->url_image = $request->url_image;
         $detail_module->title = $request->title;
         $detail_module->description = $request->description;
         $detail_module->link_url = $request->link_url;
@@ -33,7 +33,7 @@ class DetailModuleController extends Controller
             $data,[
                 'title' => 'required|string|max:100',
                 'date' => 'required|string|max:100',
-                'img' => 'required|string|max:100',
+                'url_img' => 'required|string|max:100',
                 'description' => 'required|string|max:600',
                 'link' => 'required|string|max:100',
                ]);
@@ -44,7 +44,7 @@ class DetailModuleController extends Controller
 
             $detail_module-> title= $data['title'];
             $detail_module-> date= $data['date'];
-            $detail_module-> img= $data['img'];
+            $detail_module-> url_image= $data['url_image'];
             $detail_module-> description= $data['description'];
 
             $detail_module->save();
@@ -58,5 +58,10 @@ class DetailModuleController extends Controller
         $detail_module->delete();
         $status = "success delete";
         return response()->json(compact('status'), 200);
+    }
+    public function getDetailModule()
+    {
+        $detail_module = DetailModule::all();
+        return response()->json(compact('detail_module'), 200);
     }
 }

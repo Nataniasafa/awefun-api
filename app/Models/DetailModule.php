@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Models;
-
+use App\Http\controlers\DetailModuleController;
+use App\Http\controlers\CategoryController;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,7 +13,7 @@ class DetailModule extends Model
     protected $fillable = [
        
         'date',
-        'img',
+        'url_image',
         'title',
         'description',
         'link_url',
